@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>ru.itmo.search-on-github-plugin</id>
+    <name>Search on GitHub Plugin</name>
+    <vendor email="sevakonyakhin@gmail.com" url="http://www.github.com/sevakon">sevakon</vendor>
+
+    <description><![CDATA[
+    Plugin for JetBrains IDEs that adds an easy-to-use "Search on GitHub" button
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+    </actions>
+</idea-plugin>
