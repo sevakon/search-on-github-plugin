@@ -20,6 +20,16 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Create Release
+      id: create_release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.ref }}
+        release_name: Release ${{ github.ref }}
+        draft: false
+        prerelease: false
     - name: Upload files to a GitHub release
       uses: svenstaro/upload-release-action@1.0.1
       with:
@@ -32,4 +42,4 @@ jobs:
         # Tag to use as a release
         tag: ${{ github.ref }}
         # Overwrite the release in case it already exists
-        overwrite: true
+        overwrite: false
