@@ -1,7 +1,7 @@
 <idea-plugin>
     <id>ru.seva.search-on-github-plugin</id>
     <name>Search on GitHub</name>
-    <vendor email="sevakonyakhin@gmail.com" url="http://www.github.com/sevakon">sevakon</vendor>
+    <vendor email="sevakonyakhin@gmail.com" url="http://www.github.com/sevakon">Vsevolod Konyakhin</vendor>
 
     <description><![CDATA[
     Plugin for JetBrains IDEs that adds an easy-to-use "Search on GitHub" button
@@ -20,9 +20,9 @@
         <!-- Add your actions here -->
         <group id="SearchPlugin.SearchOnGitHubAction" text="Search on GitHub"
                description="Search selected code on GitHub">
-            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
-            <action class="ru.seva.actions.SearchAction"
+            <action class="ru.seva.actions.GitHubSearchAction"
                     id="SearchOnGitHubAction" description="Search selected code on GitHub"/>
         </group>
     </actions>
