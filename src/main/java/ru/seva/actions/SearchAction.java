@@ -1,5 +1,7 @@
 package ru.seva.actions;
 
+import ru.seva.utils.BrowserRunner;
+
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.CommonDataKeys;
@@ -38,5 +40,6 @@ public class SearchAction extends AnAction {
         String selectedText = StringUtil.isEmptyOrSpaces(selectedCode) ? "" : selectedCode.trim();
 
         System.out.println(selectedText);
+        BrowserRunner.go(urlPrefix, selectedText, urlPostfix);
     }
 }
