@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>ru.itmo.search-on-github-plugin</id>
+    <id>ru.seva.search-on-github-plugin</id>
     <name>Search on GitHub</name>
     <vendor email="sevakonyakhin@gmail.com" url="http://www.github.com/sevakon">sevakon</vendor>
 
@@ -18,5 +18,12 @@
 
     <actions>
         <!-- Add your actions here -->
+        <group id="SearchPlugin.SearchOnGitHubAction" text="Search on GitHub"
+               description="Search selected code on GitHub">
+            <add-to-group group-id="EditorPopupMenu" anchor="last"/>
+            <add-to-group group-id="ConsoleEditorPopupMenu" anchor="first"/>
+            <action class="ru.seva.actions.SearchAction"
+                    id="SearchOnGitHubAction" description="Search selected code on GitHub"/>
+        </group>
     </actions>
 </idea-plugin>
